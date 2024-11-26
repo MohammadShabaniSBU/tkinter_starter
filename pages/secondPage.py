@@ -9,6 +9,7 @@ class SecondPage:
     def frame(self, app, frame: Frame):
         frame.grid()
         
+        Label(frame, text="this is second page").grid(column=1, row=1)
         label = Label(frame, text=app.getState('counter', 1))
         label.grid(column=0, row=0)
         

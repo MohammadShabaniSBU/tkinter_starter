@@ -1,9 +1,10 @@
-from pages.dragon import DragonPage
 from pages.secondPage import SecondPage
+from routes.dragon import create_dragon_routes
 
 
 def createRoutes(router):
-    router.addRoute('dragon', DragonPage)
+    create_dragon_routes(router)
+    
     router.addRoute('mammad', SecondPage)
 
-    router.push('dragon')
+    router.push('dragon.home')

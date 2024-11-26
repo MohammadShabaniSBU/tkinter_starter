@@ -18,6 +18,8 @@ class App:
     def updateGeometry(self, a):
         self.root.geometry(a)
 
+    def updateTitle(self, title):
+        self.root.title(title)
 
     def push(self, route: str):
         self.router.push(route)
