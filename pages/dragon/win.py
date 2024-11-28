@@ -9,7 +9,7 @@ class DragonWinPage:
         self.base_img_path = 'assets/images/win_bg.jpg'
         self.overlay_img_path = 'assets/images/win_image.png'
         self.back_icon_path = 'assets/images/arrow-left.png'
-        self.final_win_path = 'assets/images/burning_wall2.jpg'
+        self.final_win_path = 'assets/images/burning_wall.png'
 
         mixer.init()
         mixer.music.load('assets/voices/dragon_success_voice.mp3')
@@ -41,9 +41,9 @@ class DragonWinPage:
         canvas.tag_bind(back_btn, "<Button-1>",
                         lambda event: app.push('dragon.home'))
 
-        # TODO: check the font
-        canvas.create_text(400, 200, text="Well down! Traveler!", font=(
-            "Arial", 14), anchor='center', width=400)
+        canvas.create_text(400, 200, text="Well down! Traveler!",
+                font=app.theme['fonts'].dragon_default_font , anchor='center',
+                           width=400, justify='center', fill='#A21F45')
 
     def final_win(self, app, frame):
         frame.grid()

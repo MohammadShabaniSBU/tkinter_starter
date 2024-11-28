@@ -35,7 +35,7 @@ class DragonGameOverPage:
         canvas.pack(fill='both', expand=True)
         canvas.create_image(0, 0, image=photo, anchor='nw')
 
-        canvas.create_text(400, 600, text='You\'re done Traveler!', font=(
-            "Arial", 14), anchor='center', width=400)
+        canvas.create_text(400, 450, text='You\'re done Traveler!', fill='#FCFEE2',
+                    font=app.theme['fonts'].dragon_default_font, anchor='center', width=400)
 
         frame.after(10000, app.root.quit)

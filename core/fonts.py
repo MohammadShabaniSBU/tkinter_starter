@@ -11,3 +11,10 @@ class Fonts:
             family="Blomberg", weight=font.BOLD, size=20)
         self.hat_btn_font = tkFont.Font(family="Blomberg", size=16)
         self.hat_input_font = tkFont.Font(family="Blomberg", size=16)
+        
+        self.dragon_default_font = tkFont.Font(
+            family="DragonHunter", weight=font.BOLD, size=20)
+        self.dragon_title_font = tkFont.Font(
+            family="DragonHunter", weight=font.BOLD, size=20)
+        self.dragon_btn_font = tkFont.Font(family="DragonHunter", size=16)
+        self.dragon_input_font = tkFont.Font(family="DragonHunter", size=16)
