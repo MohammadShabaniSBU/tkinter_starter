@@ -30,7 +30,7 @@ class App:
         self.root.configure(bg=color)
 
     def push(self, route: str, **kwargs):
-        self.router.push(route)
+        self.router.push(route, **kwargs)
 
     def get_state(self, key: str, defaultValue=None):
         if key in self.states:
