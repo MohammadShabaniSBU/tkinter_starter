@@ -19,10 +19,10 @@ class Router:
     def rerender(self):
         self.push(self.current_route)
 
-    def push(self, new_route: str):
+    def push(self, new_route: str, **kwargs):
         self.current_route = new_route
 
-        page = self.routes[new_route]()
+        page = self.routes[new_route](**kwargs)
 
         if self.current_frame is not None:
             self.current_frame.destroy()

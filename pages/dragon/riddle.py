@@ -8,7 +8,7 @@ class DragonRiddlePage:
 
     def __init__(self):
         self.riddle_bg_img_path = 'assets/images/riddle_background.png'
-        self.riddles_path = 'assets/riddles/'
+        self.riddles_path = 'assets/riddles/dragon/'
         self.submit_btn_img = ImageTk.PhotoImage(
             Image.open('assets/images/dragon_submit.png').resize((50, 50))
         )
@@ -29,7 +29,8 @@ class DragonRiddlePage:
         canvas.pack(fill='both', expand=True)
         canvas.create_image(0, 0, image=photo, anchor='nw')
 
-        canvas.create_text(400, 200, text=msg, font=app.theme['fonts'].dragon_default_font, anchor='center', width=400, justify='center')
+        canvas.create_text(
+            400, 200, text=msg, font=app.theme['fonts'].dragon_default_font, anchor='center', width=400, justify='center')
 
         self.answer_entry = tk.Entry(frame)
         canvas.create_window(400, 600, window=self.answer_entry)

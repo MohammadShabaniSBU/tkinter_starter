@@ -6,7 +6,7 @@ from core.colors import Colors
 
 
 class App:
-    def __init__(self, puzzle):
+    def __init__(self, puzzle, *args, **kwargs):
         self.root = Tk()
         self.states = {}
         self.theme = {'fonts': Fonts(self.root), 'colors': Colors}
@@ -14,7 +14,7 @@ class App:
         self.init_window()
 
         self.router = Router(self)
-        self.router.push(puzzle)
+        self.router.push(puzzle, **kwargs)
 
     def init_window(self):
         self.root.geometry("800x800")
@@ -29,7 +29,7 @@ class App:
     def update_bg_color(self, color):
         self.root.configure(bg=color)
 
-    def push(self, route: str):
+    def push(self, route: str, **kwargs):
         self.router.push(route)
 
     def get_state(self, key: str, defaultValue=None):

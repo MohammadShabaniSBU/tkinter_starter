@@ -1,6 +1,8 @@
 from core.app import App
 
 
-app = App('dragon.home')
+# app = App('door.home', door='door0')
+app = App('matchstick.home')
+app.set_state('solved', False)
 app.run()
 print(app.get_state('solved'))
